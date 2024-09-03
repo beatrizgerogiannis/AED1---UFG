@@ -1,0 +1,82 @@
+1) Defina recursividade. Quando uma função é recursiva?
+    Recursividade é um termo em programação que se usa quando uma função é definida em termos de si mesma.
+    Uma função é recursiva quando quando a definição da função inclui uma chamada a si mesma
+
+2) Explique como é o funcionamento da pilha de chamada de procedimento quando se
+executa uma função recursiva?
+    Quando a chamada recursiva é chamada, o estado atual da função(as variaveis, o endereço de retorno e os parametros) é colocado no topo da pilha.
+    A nova chamada recursiva cria sua propria instancia com suas proprias variaveis e parametros. O processo continua assim, com cada chamada recursiva
+    empilhando seu estado no topo da pilha.
+    Quando a função atinge seu caso base, que é a condição que interrompe a recursão, a execução da função comça a retornar. O valor de retorno é
+    passado de volta para a chamada recursiva anterior da pilha. Isso faz com que a chamada anterior desempilhe seu estado de execução da pilha e
+    retorne de onde parou. Esse processo continua ate que todas as chamadas recursivas tenham sido retornadas e desempilhadas.
+
+3) Quando uma função recursiva é finalizada?
+    Quando todas as chamamadas recursivas tenham sido retornadas e desempilhadas.
+
+4) O que é um Tipo Abstrato de Dados (TAD)? Qual a característica fundamental na
+sua utilização?
+    É um conceito na programação que define um novo tipo de dado, juntamente com as operações que podem ser realizadas nesse novo tipo de dado.
+    Um TAD encapsula a implementação de dados e fornece uma interface consistente e bem definida para interagir com esses dados.
+    
+    A caracteristica fundamental na utilização do TAD é a abstração. O TAD permite que os detalhes internos da implementação dos dados seja ocul-
+    tado, oferecendo apenas as operações necessarias para manipular e acessar os dados. Isso significa que os usuarios do TAD nao precisam conhecer
+    os detalhes de como os dados estão armazenados ou processados internamente, mas apenas como usar as operações disponiveis.
+
+5) Quais as vantagens de se programar utilizando um Tipo Abstrato de Dados (TAD)?
+    1- abstração: Um TAD apresenta uma abstração clara e definida para interagir com os dados, ocultando os detalhes internos da implementação.
+    Isso facilita o uso dos dados pois o programador pode focar na parte logica do problema em vez da implementação adjacente.
+
+    2- Reutilização do codigo: Os TADs são feitos para serem reutilizados. Uma vez definido o TAD ele pode ser usado em diferentes partes do programa
+    ou até em programas diferentes.
+
+    3- Encapsulamento: Os TADs encapsulam a implementação dos dados, ocultando os detalhes internos. Isso promove uma melhor organização do código,
+    e ajuda a evitar a o acesso direto e incorreto dos dados.
+
+    4- Manunteção mais fácil: Ao usar TADs é mais fácil fazer a manunteção do código. Como a função esta encapsulada, as alterações internas dos
+    dados e operações podem ser feitas sem afetar o codigo que usa o TAD.
+
+
+6) Considere dois programas envolvendo um cadastro de funcionários. O programa A foi construído de acordo com os princípios de TAD. 
+Já o programa B não.
+
+Diferencie o programa A do programa B. Quais serão as diferenças entre as implementações dos dois programas?
+
+    A principal diferença entre o código A e B é que o código A, por ser feito em TAD, possuirá mais organização, uma melhor encapsulação dos
+    dados, operações mais bem definidas e reutilização dos códigos. Essas características tornam o A mais organizado, legível, modular, e mais fácil
+    de ser atualizado e mantido.
+
+7) Crie a especificação de um sistema de controle de empréstimos de uma biblioteca
+usando TAD: diga quais são os dados, as operações, como organizar os dados e
+operações durante a implementação.
+
+    Dados: Livro: estrutura contendo as informações sobre o livro, como autor, ano que foi publicado, título, etc.
+           Usuário: estrutura contendo as informações do usuário, como nome, identificação, etc.
+           empréstimo: estrutura contendo informações sobre o empréstimo, como nome do livro, quem pegou, a data, etc.
+
+    operações: cadastrar_livro: recebe as informações do livro e adiciona ao sistema da biblioteca.
+               cadastrar_usuario: recebe as informações do usuário e adiciona ao sistema da biblioteca.
+               realizar_empréstimo: recebe o livro a ser emprestado e o usuario que esta realizando o emprestimo. registrar a data de emprestimo
+               e a data de devolução.
+               devolver_livro: recebe o livro a ser devolvido. Registra a data de devolução e atualiza o status do emprestimo.
+
+
+8) Explique o que é a alocação sequencial de memória para um conjunto de elementos.
+    
+
+9) Descreva a diferença entre alocação estática e alocação dinâmica.
+10) Enumere as vantagens e desvantagens de se utilizar alocação encadeada para um
+conjunto de elementos.
+11) Explique, com suas palavras, como é realizada a remoção de um elemento de uma
+lista encadeada com n elementos, sabendo-se que esses elementos são todos
+números inteiros distintos. Considere os seguintes casos:
+a) No caso de o parâmetro da função de remoção ser o valor do elemento a ser
+removido, isto é, um inteiro;
+b) No caso de o parâmetro da função de remoção ser um ponteiro para o nó da lista
+que se pretende remover.
+12) Quais as vantagens de se utilizar alocação encadeada para um conjunto de
+elementos? Quais as possíveis desvantagens? Comente sobre as vantagens e
+desvantagens citadas.
+13) Especifique um problema que é melhor de ser resolvido com uma representação
+estática e sequencial e outro que seja melhor de ser resolvido com uma
+representação dinâmica e encadeada. Justifique.
